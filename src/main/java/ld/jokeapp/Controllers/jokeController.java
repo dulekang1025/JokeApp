@@ -1,6 +1,6 @@
-package Controllers;
+package ld.jokeapp.Controllers;
 
-import Services.JokeService;
+import ld.jokeapp.Services.JokeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +17,7 @@ public class jokeController {
     }
 
     @RequestMapping({"/", ""})
-    public String showJoke(Model model){
+    public String showJoke(Model model) {
         model.addAttribute("joke", jokeService.getJoke());
         return "chunknorris";
     }
